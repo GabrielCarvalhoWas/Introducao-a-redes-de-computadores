@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Introdução a Redes de Computadores</title>
+</head>
+<body>
+    
+    <h1>Estudo Focado em Redes - Introdução a Redes de Computadores Parte 05</h1>
+    <hr>
+    <a href="01_introducao.html">Ir para parte 1</a><br>
+    <a href="02_introducao.html">Ir para parte 2</a><br>
+    <a href="03_introducao.html">Ir para parte 3</a><br>
+    <a href="04_introducao.html">Ir para parte 4</a><br>
+    <a href="05_introducao.html">Ir para parte 5</a><br>
+    <h1>Arquitetura de Camadas</h1>
+<p><strong>O que é:</strong> É uma estrutura organizacional em que as funções de um sistema são divididas em camadas distintas, cada uma responsável por realizar tarefas específicas.</p>
+
+
+<p><strong>O que faz:</strong> Cada camada executa suas próprias ações enquanto se comunica com as camadas adjacentes. Isso permite uma abordagem modular e simplifica a compreensão e modificação do sistema.</p>
+
+
+<p><strong>Resumindo:</strong> A arquitetura de camadas se refere à organização das funções de um sistema em diferentes camadas, cada uma responsável por realizar tarefas específicas. No contexto das redes de computadores, essa arquitetura é representada pelo modelo de referência OSI, que define sete camadas distintas, cada uma com suas próprias funções e responsabilidades na comunicação de dados. Portanto, os sete tipos de camadas do modelo OSI são um exemplo clássico de arquitetura de camadas em redes de computadores.</p>
+
+
+
+<h1>Camadas de Protocolo</h1>
+<p><strong>O que é:</strong> Refere-se à organização dos protocolos de rede em camadas, seguindo o modelo de camadas.</p>
+
+
+<p><strong>O que faz:</strong> Cada camada de protocolo fornece serviços à camada acima dela, realizando ações específicas e usando os serviços da camada imediatamente inferior.</p>
+
+
+<p><strong>Resumindo:</strong> Na camada de protocolos, eles fornecem serviços de uma camada para outra seguindo o modelo de camadas.</p>
+
+
+
+<h1>Encapsulamento</h1>
+<p><strong>O que é:</strong> É o processo de aninhar informações dentro de outras informações em diferentes camadas do modelo de protocolos.</p>
+
+
+<p><strong>O que faz:</strong> À medida que os dados são enviados através das camadas do modelo de protocolos, eles são encapsulados em diferentes estruturas (como segmentos, datagramas e quadros) adicionando informações de cabeçalho necessárias para o roteamento e entrega correta dos dados.</p>
+
+<p><strong>Resumindo:</strong>
+<br>
+
+O encapsulamento é como se enviasse uma carta dentro de outra carta. Imagine que você queira enviar uma carta para seu amigo. Antes de colocá-la no correio, você a coloca dentro de um envelope. Esse envelope é como uma camada que protege e organiza a sua carta. Agora, quando a carta chega ao seu amigo, ele abre o envelope e encontra sua mensagem lá dentro.
+<br><br>
+No mundo da tecnologia, o encapsulamento é parecido. Quando você envia dados pela internet, como uma foto ou um email, esses dados são colocados em camadas, como se fossem envelopes. Cada camada adiciona informações importantes, como endereços e instruções para o envio correto dos dados.
+<br><br>    
+Quando os dados chegam ao destino, as camadas vão sendo abertas uma a uma, como se fossem envelopes dentro de envelopes. Assim, a mensagem é "desencapsulada" e entregue ao seu destino final, seja um computador, celular ou outro dispositivo.
+<br><br>  
+O encapsulamento não está diretamente relacionado à criptografia, que é a técnica de codificar dados para protegê-los de olhares curiosos. O encapsulamento trata mais da organização e do envio seguro dos dados pelas camadas da rede.</p>
+
+
+
+
+<h1>Modelo de Referência OSI</h1>
+
+
+<p><strong>O que é:</strong> É um modelo de rede proposto pela ISO que define sete camadas para organizar as funções de rede.</p>
+
+
+<p><strong>O que faz:</strong> As camadas do modelo OSI incluem funções como aplicação, apresentação, sessão, transporte, rede, enlace e física, cada uma com responsabilidades específicas na comunicação de dados.</p>
+
+
+<p><strong>Resumindo: </strong>o Modelo OSI é uma referência teórica que define como os sistemas de rede devem se comunicar, dividindo a comunicação em camadas para facilitar o desenvolvimento, a implementação e a manutenção de redes de computadores.</p>
+
+
+
+
+<h1>Camada de Aplicação</h1>
+<p><strong>O que é:</strong> É a camada mais alta do modelo OSI ou da pilha TCP/IP, responsável pela comunicação entre aplicações de software.</p>
+
+
+<p><strong>O que faz:</strong> Fornece serviços de rede para as aplicações, como transferência de arquivos (FTP), correio eletrônico (SMTP) e acesso à web (HTTP).</p>
+
+<p><strong>Resumindo:</strong></p>
+<p>A camada de aplicação, na arquitetura de rede do modelo OSI, é a camada mais alta e é responsável por fornecer serviços de rede diretamente às aplicações de software. Aqui estão algumas das principais funções da camada de aplicação:</p>
+<ol>
+  <li><strong>Comunicação com Aplicações:</strong> A camada de aplicação facilita a comunicação entre as aplicações de software em diferentes dispositivos de rede. Por exemplo, permite que um navegador web em um computador se comunique com um servidor web para carregar uma página da internet.</li>
+  <li><strong>Transferência de Dados:</strong> Ela oferece serviços para transferir dados entre sistemas, como transferência de arquivos (FTP), correio eletrônico (SMTP, POP3, IMAP), acesso remoto a recursos de rede (SSH, Telnet) e acesso à web (HTTP).</li>
+  <li><strong>Protocolos de Aplicação:</strong> Define protocolos específicos para diferentes tipos de aplicação. Por exemplo, o protocolo HTTP é usado para transferência de páginas da web, enquanto o protocolo SMTP é usado para enviar e receber e-mails.</li>
+  <li><strong>Interpretação de Dados:</strong> A camada de aplicação também pode lidar com a interpretação e formatação dos dados para garantir que sejam compreensíveis para as aplicações. Por exemplo, a camada pode converter dados em formatos específicos para exibição em uma aplicação gráfica.</li>
+</ol>
+<p>Essencialmente, a camada de aplicação é responsável por permitir que as aplicações de software se comuniquem e interajam de maneira eficiente em uma rede de computadores, oferecendo serviços de rede necessários para a transferência e interpretação de dados.</p>
+
+
+
+<h1>Camada de Transporte</h1>
+
+
+<p><strong>O que é:</strong> É responsável pelo transporte de dados entre sistemas finais, oferecendo serviços como entrega confiável (TCP) ou não confiável (UDP) de mensagens.</p>
+
+
+<p><strong>O que faz:</strong> Garante que os dados sejam entregues corretamente, controlando o fluxo e detectando erros, se necessário.</p>
+
+<p><strong>Resumindo:</strong></p>
+<ol>
+    <li><strong>Entrega Confíavel:</strong> A camada de transporte pode oferecer um serviço de entrega confiável de dados, garantindo que todos os pacotes sejam recebidos corretamente pelo destino. Isso é realizado pelo protocolo TCP (Transmission Control Protocol).</li>
+    <li><strong>Entrega Não Confíavel:</strong> Além da entrega confiável, a camada de transporte também pode oferecer um serviço de entrega não confiável, onde os pacotes podem ser enviados sem garantia de recebimento. Isso é feito pelo protocolo UDP (User Datagram Protocol).</li>
+    <li><strong>Segmentação e Reordenação:</strong> Quando os dados são grandes demais para serem enviados em um único pacote, a camada de transporte os segmenta em partes menores e os reordena no destino para garantir a integridade da informação.</li>
+    <li><strong>Controle de Fluxo:</strong> A camada de transporte também gerencia o controle de fluxo, ajustando a velocidade de transmissão para evitar a sobrecarga do destinatário e garantir uma comunicação eficiente.</li>
+    <li><strong>Deteção e Correção de Erros:</strong> Ela é responsável por detectar erros nos dados transmitidos e, quando possível, corrigi-los automaticamente ou solicitar uma retransmissão dos pacotes afetados.</li>
+  </ol>
+  <p>Em resumo, a camada de transporte garante que os dados sejam transmitidos de forma confiável e eficiente entre os sistemas finais, oferecendo diferentes serviços de acordo com as necessidades da aplicação e gerenciando aspectos como controle de fluxo, segmentação de dados e deteção de erros.</p>
+  </body>
+
+
+
+
+<h1>Camada de Rede</h1>
+
+
+<p><strong>O que é:</strong> É responsável pelo roteamento dos dados através da rede, determinando o melhor caminho para a entrega de pacotes.</p>
+
+
+<p><strong>O que faz:</strong> Utiliza protocolos como o IP para endereçamento e roteamento dos pacotes entre sistemas finais e roteadores.</p>
+
+<p><strong>Resumindo:</strong></p>
+<ol>
+    <li><strong>Roteamento:</strong> A camada de rede utiliza protocolos como o IP (Internet Protocol) para determinar o melhor caminho que os pacotes de dados devem seguir através da rede até o seu destino final.</li>
+    <li><strong>Endereçamento:</strong> Cada dispositivo em uma rede possui um endereço IP único, que é utilizado pela camada de rede para identificar a origem e o destino dos pacotes de dados durante o processo de roteamento.</li>
+    <li><strong>Encaminhamento:</strong> Após receber os pacotes de dados da camada de transporte, a camada de rede determina o próximo salto (hop) que os pacotes devem dar em direção ao destino, baseando-se nas informações de roteamento.</li>
+    <li><strong>Fragmentação e Remontagem:</strong> Quando os pacotes de dados são muito grandes para serem transmitidos em uma única vez, a camada de rede os fragmenta em partes menores no remetente e os remonta no destinatário para garantir a integridade da informação.</li>
+    <li><strong>Encapsulamento:</strong> Durante o processo de transmissão, os pacotes de dados são encapsulados em datagramas IP, adicionando cabeçalhos com informações de origem, destino e controle necessárias para a entrega correta dos dados.</li>
+  </ol>
+  <p>Em resumo, a camada de rede é responsável por rotear, endereçar, encaminhar, fragmentar e remontar os pacotes de dados, garantindo que eles cheguem ao destino final de forma eficiente e segura dentro de uma rede de computadores.</p>
+
+
+
+<h1>Camada de Enlace</h1>
+
+
+<p><strong>O que é:</strong> É responsável pela transferência confiável de dados entre nós adjacentes em uma rede, como entre um computador e um switch.</p>
+
+
+<p><strong>O que faz:</strong> Controla a comunicação em um único enlace, garantindo a integridade dos dados e gerenciando o acesso ao meio físico.</p>
+
+
+<p>A camada de enlace desempenha um papel importante na comunicação de dados em uma rede, sendo responsável pela transferência confiável de informações entre dispositivos adjacentes. Veja abaixo as principais funções desta camada:</p>
+
+<p><strong>Resumindo: </strong></p>
+<ol>
+  <li><strong>Controle de Acesso ao Meio (MAC):</strong> A camada de enlace controla a comunicação em um único enlace, gerenciando o acesso ao meio físico para garantir que os dispositivos conectados possam transmitir e receber dados sem colisões.</li>
+  <li><strong>Detecção e Correção de Erros:</strong> Durante a transmissão de dados, a camada de enlace verifica a integridade das informações recebidas e, se necessário, realiza a detecção e correção de erros para garantir a precisão dos dados.</li>
+  <li><strong>Endereçamento Físico:</strong> Cada dispositivo em uma rede possui um endereço MAC único, que é utilizado pela camada de enlace para identificar os destinatários das mensagens e controlar o fluxo de dados.</li>
+  <li><strong>Frame:</strong> Os dados transmitidos pela camada de enlace são encapsulados em frames, que contêm informações como endereços MAC de origem e destino, controle de fluxo e verificação de erros.</li>
+  <li><strong>Repetidores e Switches:</strong> Dispositivos como repetidores e switches atuam na camada de enlace para amplificar e direcionar os sinais, facilitando a comunicação entre dispositivos conectados em uma rede.</li>
+</ol>
+<p>Em resumo, a camada de enlace é responsável por controlar o acesso ao meio físico, detectar e corrigir erros, gerenciar endereços físicos, encapsular dados em frames e facilitar a comunicação entre dispositivos adjacentes em uma rede.</p>
+
+
+
+
+<h1>Camada Física</h1>
+
+<p><strong>O que é:</strong> É a camada mais baixa do modelo OSI, lidando com a transmissão física dos bits sobre o meio de comunicação.</p>
+
+
+<p><strong>O que faz:</strong> Converte os bits em sinais elétricos, ópticos ou de rádio para a transmissão física através do meio de comunicação, como cabos ou ondas de rádio.</p>
+
+<p><strong>Resumindo: </strong> <ul>
+    <li><strong>Meio de Comunicação:</strong> O meio físico pode ser um cabo de cobre, fibra óptica, ondas de rádio ou qualquer outro meio que permita a transmissão de sinais.</li>
+    <li><strong>Conversão de Bits em Sinais:</strong> Antes de serem transmitidos, os bits são convertidos em sinais elétricos, ópticos ou de rádio, dependendo do meio físico utilizado.</li>
+    <li><strong>Equipamentos:</strong> Nesta camada, são utilizados dispositivos como cabos, conectores, repetidores e amplificadores para garantir a transmissão adequada dos sinais.</li>
+    <li><strong>Taxa de Transmissão:</strong> A camada física também determina a taxa de transmissão de dados, que pode variar de acordo com o meio físico e as tecnologias empregadas.</li>
+    <li><strong>Sinalização:</strong> Os sinais transmitidos podem ser modulados de diferentes formas para representar os bits, utilizando técnicas como modulação de amplitude, frequência ou fase.</li>
+  </ul>
+  <p>Em resumo, a camada física lida diretamente com a transmissão física dos bits sobre o meio de comunicação, utilizando diferentes tecnologias e equipamentos para garantir a comunicação eficiente entre os dispositivos em uma rede.</p></p>
+
+  <a href="01_introducao.html">Ir para parte 1</a><br>
+    <a href="02_introducao.html">Ir para parte 2</a><br>
+    <a href="03_introducao.html">Ir para parte 3</a><br>
+    <a href="04_introducao.html">Ir para parte 4</a><br>
+
+
+
+
+</body>
+</html>
+    

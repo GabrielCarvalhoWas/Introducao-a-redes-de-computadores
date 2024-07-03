@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Introdução a Redes de Computadores </title>
+</head>
+<body>
+   
+    <h1>Estudo Focado em Redes - Introdução a Redes de Computadores Parte 04</h1>
+    <hr>
+    <a href="01_introducao.html">Ir para parte 1</a><br>
+    <a href="02_introducao.html">Ir para parte 2</a><br>
+    <a href="03_introducao.html">Ir para parte 3</a><br>
+    <a href="04_introducao.html">Ir para parte 4</a><br>
+    <a href="05_introducao.html">Ir para parte 5</a><br>
+    <h1>O núcleo da rede:</h1>
+    <p>O núcleo da rede é a parte central da Internet que interconecta diversos sistemas finais (computadores, smartphones, etc.) através de uma rede de comutadores de pacotes e enlaces. Esses comutadores de pacotes podem ser roteadores ou comutadores de camada de enlace. Imagine-o como uma grande rede de estradas que conectam várias cidades.</p>
+
+    <h1>Comutação de Pacotes</h1>
+
+    <h2>O que são Pacotes?</h2>
+    <p>Quando um sistema final (por exemplo, seu computador) quer enviar uma mensagem longa (como um e-mail ou um arquivo de vídeo), ele a divide em pedaços menores chamados pacotes. Cada pacote é enviado individualmente pela rede e, ao chegar ao destino, todos os pacotes são reunidos novamente para reconstruir a mensagem original.</p>
+
+    <h2>Transmissão Armazena-e-Reenvia (Store-and-Forward)</h2>
+    <p>Os roteadores utilizam a técnica de <strong>transmissão armazena-e-reenvia</strong>. Isso significa que um roteador precisa receber todo o pacote antes de começar a transmiti-lo ao próximo roteador ou sistema final.</p>
+    <p><strong>Exemplo Simples:</strong></p>
+    <ul>
+        <li><strong>Origem:</strong> O computador A quer enviar um pacote para o computador B.</li>
+        <li><strong>Roteador:</strong> Há um roteador intermediário entre A e B.
+            <ul>
+                <li>O computador A envia um pacote de L bits.</li>
+                <li>O roteador recebe todo o pacote (leva L/R segundos, onde R é a taxa de transmissão do enlace).</li>
+                <li>Após receber o pacote completo, o roteador reenvia o pacote ao computador B (leva mais L/R segundos).</li>
+            </ul>
+        </li>
+    </ul>
+    <p>O tempo total desde o início do envio até o recebimento completo no destino é 2L/R segundos.</p>
+
+    <h2>Envio de Múltiplos Pacotes</h2>
+    <p>Se o computador A tem vários pacotes para enviar ao computador B, a sequência é a seguinte:</p>
+    <ul>
+        <li>O primeiro pacote é totalmente transmitido para o roteador, que o reenvia ao destino.</li>
+        <li>Simultaneamente, o computador A começa a enviar o segundo pacote assim que termina o primeiro.</li>
+        <li>O segundo pacote chega ao roteador enquanto o primeiro chega ao destino.</li>
+        <li>Isso continua até que todos os pacotes sejam enviados.</li>
+    </ul>
+    <p>Se há N enlaces entre a origem e o destino, o tempo total para um pacote atravessar todos os enlaces é \( N \cdot L / R \).</p>
+
+    <h2>Atrasos de Fila e Perda de Pacotes</h2>
+
+    <h3>Atrasos de Fila</h3>
+    <p>Quando um pacote chega a um roteador, ele pode encontrar o enlace de saída ocupado. Nesse caso, ele precisa esperar em uma fila (buffer de saída) até poder ser transmitido. Esse atraso é variável e depende do congestionamento da rede.</p>
+
+    <h3>Perda de Pacotes</h3>
+    <p>Se a fila (buffer) estiver cheia, pacotes adicionais que chegarem serão descartados, resultando na perda de pacotes. Isso ocorre quando a taxa de chegada de pacotes ao roteador é maior que a taxa de saída.</p>
+
+    <h2>Roteamento de Pacotes</h2>
+
+    <h3>Endereço IP</h3>
+    <p>Cada sistema final na Internet tem um endereço IP, similar a um endereço postal, que identifica de onde veio e para onde deve ir cada pacote.</p>
+
+    <h3>Tabelas de Encaminhamento</h3>
+    <p>Cada roteador possui uma tabela de encaminhamento que mapeia endereços IP de destino para os enlaces de saída apropriados. Quando um pacote chega, o roteador examina o endereço de destino, consulta a tabela e encaminha o pacote para o próximo enlace.</p>
+
+    <h3>Protocolos de Roteamento</h3>
+    <p>As tabelas de encaminhamento são configuradas automaticamente por protocolos de roteamento, que determinam o caminho mais curto ou eficiente para os pacotes chegarem ao destino.</p>
+
+    <h1>Comutação de Circuitos (Contraste)</h1>
+
+    <h2>Reservar Recursos</h2>
+    <p>Ao contrário da comutação de pacotes, a comutação de circuitos reserva recursos ao longo do caminho para a comunicação entre sistemas finais. Isso é como fazer uma reserva em um restaurante. A rede telefônica tradicional funciona assim.</p>
+
+    <h2>Multiplexação</h2>
+    <p>Na comutação de circuitos, os recursos podem ser divididos usando duas técnicas principais:</p>
+    <ul>
+        <li><strong>FDM (Frequency-Division Multiplexing):</strong> Divisão da largura de banda do enlace em diferentes bandas de frequência.</li>
+        <li><strong>TDM (Time-Division Multiplexing):</strong> Divisão do tempo em intervalos fixos (slots), com cada conexão utilizando um slot específico.</li>
+    </ul>
+
+    <h1>Vantagens e Desvantagens</h1>
+    <h2>Comutação de Pacotes</h2>
+    <ul>
+        <li><strong>Vantagem:</strong> Melhor utilização dos recursos, maior eficiência, flexibilidade.</li>
+        <li><strong>Desvantagem:</strong> Atrasos variáveis, não garantidos, menos previsíveis.</li>
+    </ul>
+
+    <h2>Comutação de Circuitos</h2>
+    <ul>
+        <li><strong>Vantagem:</strong> Conexão constante e garantida, sem atrasos variáveis.</li>
+        <li><strong>Desvantagem:</strong> Recursos podem ficar ociosos, menos eficiente, configuração complexa.</li>
+    </ul>
+
+
+
+
+
+
+    <h1>Comutadores de pacotes</h1>
+    <p>A função principal de ambas as tecnologias — comutação de circuitos e comutação de pacotes — é enviar dados entre dispositivos finais. No entanto, elas diferem significativamente em como essa tarefa é realizada. Vamos detalhar os aspectos principais para reforçar o entendimento:</p>
+    
+    <h2>Comutação de Pacotes</h2>
+    <ul>
+        <li><strong>Divisão em Pacotes:</strong> A mensagem é dividida em pequenos pacotes de dados.</li>
+        <li><strong>Roteamento Independente:</strong> Cada pacote pode seguir um caminho diferente pela rede.</li>
+        <li><strong>Armazena-e-Reenvia:</strong> Pacotes são temporariamente armazenados e depois reenviados pelos roteadores.</li>
+        <li><strong>Compartilhamento de Recursos:</strong> A largura de banda da rede é compartilhada entre muitos usuários.</li>
+        <li><strong>Flexibilidade:</strong> Adequado para diferentes tipos de dados (texto, vídeo, voz).</li>
+        <li><strong>Reunião no Destino:</strong> Pacotes são reunidos no destino para formar a mensagem original.</li>
+        <li><strong>Variação de Atrasos:</strong> Pode haver variação nos atrasos e perda de pacotes.</li>
+    </ul>
+
+    <h2>Comutação de Circuitos</h2>
+    <ul>
+        <li><strong>Estabelecimento de Circuito:</strong> Um caminho fixo e exclusivo é estabelecido entre os dispositivos antes da comunicação.</li>
+        <li><strong>Conexão Contínua:</strong> O circuito permanece dedicado durante toda a sessão de comunicação.</li>
+        <li><strong>Recursos Reservados:</strong> Recursos da rede são reservados exclusivamente para esse circuito.</li>
+        <li><strong>Constância:</strong> Ideal para comunicação em tempo real (ex.: chamadas telefônicas), pois não há variação de atrasos.</li>
+        <li><strong>Ociosidade de Recursos:</strong> Recursos não podem ser usados por outros até que a conexão seja encerrada, mesmo se não estiverem sendo utilizados ativamente.</li>
+    </ul>
+
+    <h2>Comparação Funcional</h2>
+    <ul>
+        <li><strong>Objetivo Comum:</strong> Em ambas as tecnologias, o objetivo é transmitir dados de um dispositivo para outro.</li>
+        <li><strong>Método de Transmissão:</strong>
+            <ul>
+                <li><strong>Comutação de Pacotes:</strong> Transmite dados dividindo-os em pacotes, que são enviados independentemente pela rede.</li>
+                <li><strong>Comutação de Circuitos:</strong> Transmite dados estabelecendo um caminho fixo e contínuo entre os dispositivos.</li>
+            </ul>
+        </li>
+        <li><strong>Eficiência e Flexibilidade:</strong>
+            <ul>
+                <li><strong>Comutação de Pacotes:</strong> Mais eficiente no uso dos recursos da rede e flexível para diferentes tipos de tráfego.</li>
+                <li><strong>Comutação de Circuitos:</strong> Menos eficiente devido à reserva de recursos, mas mais estável para comunicações contínuas.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Exemplo Prático</h2>
+    <ul>
+        <li><strong>Internet (Comutação de Pacotes):</strong> Quando você navega na web ou envia um e-mail, seus dados são divididos em pacotes que podem viajar por diferentes caminhos na rede e são reunidos no destino.</li>
+        <li><strong>Telefone Fixo (Comutação de Circuitos):</strong> Durante uma chamada telefônica tradicional, um circuito exclusivo é estabelecido para garantir uma comunicação contínua e sem variações de atraso.</li>
+    </ul>
+
+    <h2>Conclusão</h2>
+    <p>Enquanto ambos os métodos têm o objetivo de enviar dados entre dispositivos finais, eles diferem na eficiência, flexibilidade, e na maneira como os dados são transmitidos. A escolha entre comutação de pacotes e comutação de circuitos depende das necessidades específicas da aplicação, como a necessidade de comunicação em tempo real ou a eficiência no uso dos recursos da rede.</p>
+    <hr>
+    <hr>
+    <hr><hr><hr>
+    <!-- Adicionando explicação sobre Atraso, Perda e Vazão -->
+    <h2>Atraso, Perda e Vazão em Redes de Comutação de Pacotes</h2>
+    <p>Ideal vs. Realidade: Inicialmente, o texto menciona que o ideal seria transferir dados instantaneamente e sem perdas na internet, porém, isso não é possível devido às limitações físicas e tecnológicas das redes de computadores.</p>
+    <p>Restrições e Problemas nas Redes: As redes de computadores impõem restrições à vazão (quantidade de dados transferidos por segundo), apresentam atrasos entre sistemas finais e podem perder pacotes.</p>
+    <p>Questões Interessantes: Essas limitações e problemas abrem espaço para muitas questões fascinantes sobre como lidar com eles, motivando estudos e pesquisas na área de redes de computadores.</p>
+
+    <h2>Atraso em Redes de Comutação de Pacotes</h2>
+
+    <h3>Tipos de Atraso</h3>
+    <p>O texto detalha os diferentes tipos de atraso que um pacote pode enfrentar ao viajar de um nó para outro em uma rede de computadores. Esses atrasos incluem o atraso de processamento nodal, atraso de fila, atraso de transmissão e atraso de propagação.</p>
+    <p>Atraso Nodal Total: Todos esses atrasos se somam para formar o atraso nodal total, que afeta o desempenho de várias aplicações da internet.</p>
+    <p>Impacto nos Pacotes: O desempenho de busca, navegação web, e-mail, mensagens instantâneas, entre outros, é afetado por esses atrasos na rede.</p>
+
+    <h3>Detalhes sobre os Tipos de Atraso</h3>
+    <p>Atraso de Processamento: É o tempo necessário para processar o pacote em um roteador, incluindo a verificação de erros e a decisão do roteador sobre o próximo enlace.</p>
+    <p>Atraso de Fila: O pacote espera na fila para ser transmitido pelo enlace, e o tempo de espera depende do tráfego na fila.</p>
+    <p>Atraso de Transmissão: É o tempo necessário para transmitir todos os bits do pacote pelo enlace, dependendo da velocidade de transmissão.</p>
+    <p>Atraso de Propagação: É o tempo necessário para um bit se propagar de um roteador ao próximo, dependendo da distância e da velocidade de propagação do enlace.</p>
+
+    <h3>Comparação entre Atrasos de Transmissão e Propagação</h3>
+    <p>O texto destaca a diferença entre esses dois atrasos, explicando que o atraso de transmissão é baseado na velocidade de transmissão do enlace, enquanto o atraso de propagação é baseado na distância entre os roteadores e na velocidade de propagação do enlace.</p>
+
+    <h3>Atraso de Fila e Perda de Pacotes</h3>
+    <p>Atraso de Fila: O texto aprofunda o atraso de fila, explicando como ele pode variar de pacote para pacote, dependendo do tráfego na fila e da capacidade de transmissão. Também menciona a intensidade de tráfego como um fator importante.</p>
+    <p>Perda de Pacotes: Destaca que, quando a intensidade de tráfego excede a capacidade da fila, os pacotes podem ser perdidos. Isso ocorre quando não há espaço na fila para armazenar um novo pacote.</p>
+
+    <h3>Atraso Fim a Fim</h3>
+    <p>Definição: Considera o atraso total do sistema, desde a origem até o destino, levando em conta todos os atrasos nodais ao longo do caminho.</p>
+    <p>Equação e Generalização: Apresenta uma equação geral para calcular o atraso fim a fim, considerando os atrasos de processamento, transmissão e propagação em cada nó ao longo da rota.</p>
+
+    <h2>Comutação de Circuitos (Contraste)</h2>
+    <a href="01_introducao.html">Ir para parte 1</a><br>
+    <a href="02_introducao.html">Ir para parte 2</a><br>
+    <a href="03_introducao.html">Ir para parte 3</a><br>
+    <a href="05_introducao.html">Ir para parte 5</a><br>
+</body>
+    <!-- Restante do seu código continua aqui -->
+</body>
+</html>

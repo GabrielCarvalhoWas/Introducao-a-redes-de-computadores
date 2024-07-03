@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Introdução a Redes de Computadores</title>
+</head>
+<body>
+    
+    <h1>Estudo Focado em Redes - Introdução a Redes de Computadores Parte 03</h1>
+    <hr>
+    <a href="01_introducao.html">Ir para parte 1</a><br>
+    <a href="02_introducao.html">Ir para parte 2</a><br>
+    <a href="03_introducao.html">Ir para parte 3</a><br>
+    <a href="04_introducao.html">Ir para parte 4</a><br>
+    <a href="05_introducao.html">Ir para parte 5</a><br>
+
+    <h1>Meios Físicos</h1>
+
+    <h2>O Conceito de Meio Físico</h2>
+    <p>O meio físico é a substância ou material pelo qual um sinal de comunicação é transmitido de um transmissor para um receptor. Quando um bit sai de um sistema final, ele atravessa uma série de enlaces e roteadores até chegar ao sistema final de destino. Cada transmissão entre um transmissor e um receptor usa um meio físico, que pode ser um cabo (meios guiados) ou o ar/espaço (meios não guiados).</p>
+
+    <h2>Categorias de Meios Físicos</h2>
+    <ul>
+        <li><strong>Meios Guiados:</strong> Aqui, as ondas são direcionadas através de um meio sólido.
+            <ul>
+                <li>Par de Fios de Cobre Trançado</li>
+                <li>Cabo Coaxial</li>
+                <li>Fibra Ótica</li>
+            </ul>
+        </li>
+        <li><strong>Meios Não Guiados:</strong> As ondas se propagam na atmosfera ou no espaço.
+            <ul>
+                <li>Canais de Rádio Terrestres</li>
+                <li>Canais de Rádio por Satélite</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Detalhamento dos Meios Guiados</h2>
+    <h3>Par de Fios de Cobre Trançado (Twisted Pair)</h3>
+    <p><strong>Descrição:</strong> Consiste em dois fios de cobre isolados, cada um com cerca de 1 mm de espessura, trançados em espiral. Essa configuração reduz a interferência elétrica.</p>
+    <p><strong>Uso:</strong> Amplamente utilizado em redes de telefonia e redes locais (LANs).</p>
+    <p><strong>Categorias:</strong></p>
+    <ul>
+        <li>UTP (Unshielded Twisted Pair): Sem blindagem adicional, usado em muitas LANs.</li>
+        <li>STP (Shielded Twisted Pair): Com blindagem, para maior proteção contra interferência.</li>
+    </ul>
+    <p><strong>Desempenho:</strong> Taxas de transmissão variando de 10 Mbits/s a 10 Gbits/s, dependendo da qualidade do fio e da distância.</p>
+    <p><strong>Evolução:</strong> Inicialmente preterido pela fibra ótica, mas continua relevante, especialmente com cabos de categoria 6a que suportam até 10 Gbits/s.</p>
+
+    <h3>Cabo Coaxial</h3>
+    <p><strong>Descrição:</strong> Composto por dois condutores de cobre concêntricos, com isolamento e blindagem especial.</p>
+    <p><strong>Uso:</strong> Comum em sistemas de televisão a cabo e acesso à Internet via modem a cabo.</p>
+    <p><strong>Características:</strong> Pode ser um meio compartilhado, onde vários sistemas finais podem ser conectados e compartilhar o sinal.</p>
+
+    <h3>Fibra Ótica</h3>
+    <p><strong>Descrição:</strong> Conduz pulsos de luz que representam bits, através de um meio delgado e flexível.</p>
+    <p><strong>Uso:</strong> Predominante em backbone de redes de longa distância e cabos submarinos.</p>
+    <p><strong>Características:</strong></p>
+    <ul>
+        <li>Taxas de Transmissão: Altíssimas, podendo chegar a centenas de Gbits/s.</li>
+        <li>Imunidade: Imune à interferência eletromagnética e baixa atenuação de sinal.</li>
+        <li>Desvantagens: Alto custo de equipamentos óticos para transmissões de curta distância.</li>
+    </ul>
+    <p><strong>Padrões OC:</strong> OC-1, OC-3, OC-12, etc., onde cada OC-n corresponde a n x 51,8 Mbits/s.</p>
+
+    <h2>Detalhamento dos Meios Não Guiados</h2>
+    <h3>Canais de Rádio Terrestres</h3>
+    <p><strong>Descrição:</strong> Transmitem sinais no espectro eletromagnético, sem necessidade de cabos físicos.</p>
+    <p><strong>Uso:</strong> Comuns em LANs sem fio (Wi-Fi), dispositivos móveis e tecnologias de comunicação pessoal.</p>
+    <p><strong>Características:</strong></p>
+    <ul>
+        <li>Tipos de Canais: Curta distância (alguns metros), pequeno alcance (dezenas a centenas de metros) e longo alcance (dezenas de quilômetros).</li>
+        <li>Desafios: Atenuação de sinal, interferência e perda de sinal por múltiplos caminhos.</li>
+    </ul>
+
+    <h3>Canais de Rádio por Satélite</h3>
+    <h3>Satélites Geoestacionários</h3>
+    <p><strong>Descrição:</strong> Permanecem fixos sobre um ponto da Terra, a 36 mil quilômetros de altitude.</p>
+    <p><strong>Características:</strong> Grande atraso de propagação (280 ms), mas altas velocidades (centenas de Mbits/s).</p>
+    <p><strong>Uso:</strong> Áreas remotas sem acesso via DSL ou cabo.</p>
+
+    <h3>Satélites de Órbita Baixa (LEO)</h3>
+    <p><strong>Descrição:</strong> Orbitam mais próximos da Terra, não fixos sobre um ponto.</p>
+    <p><strong>Características:</strong> Cobertura contínua requer múltiplos satélites.</p>
+    <p><strong>Potencial:</strong> Futuro acesso à Internet de alta velocidade.</p>
+
+    <h2>Custos dos Meios Físicos</h2>
+    <ul>
+        <li>
+            <p><strong>Custo de Instalação:</strong> Geralmente, o custo dos materiais (como fios de cobre ou cabos de fibra ótica) é baixo comparado ao custo de mão de obra para instalação.</p>
+        </li>
+        <li>
+            <p><strong>Economia:</strong> É comum instalar múltiplos tipos de cabos em novos edifícios para evitar custos futuros de instalação adicional.</p>
+        </li>
+    </ul>
+    <hr>
+    <h1>Conclusão</h1>
+    <p>Os meios físicos de transmissão são variados e têm diferentes características que os tornam adequados para diferentes usos na infraestrutura de comunicação da Internet. Os meios guiados, como pares de fios de cobre, cabos coaxiais e fibras óticas, são usados em situações onde a transmissão precisa ser contida em um meio sólido. Já os meios não guiados, como canais de rádio terrestres e por satélite, são ideais para cenários de mobilidade e longas distâncias sem necessidade de cabeamento físico.</p>
+
+    <h1>Explicação Simples para Crianças</h1>
+    <h2>O Que É um Meio Físico?</h2>
+    <p>Quando você quer mandar uma mensagem para um amigo, você pode usar diferentes formas de fazer isso. Um <strong>meio físico</strong> é a maneira pela qual a mensagem viaja de você até seu amigo.</p>
+
+    <h2>Dois Tipos de Meios Físicos</h2>
+    <h3>1. Meios Guiados (como cabos)</h3>
+    <ul>
+        <li><strong>Par de Fios de Cobre Trançado</strong>
+            <ul>
+                <li><strong>Descrição:</strong> Dois fios de cobre trançados como uma trança de cabelo. Usado para enviar mensagens elétricas.</li>
+                <li><strong>Uso:</strong> Dentro das paredes de muitas casas e escritórios, conectando telefones e computadores.</li>
+            </ul>
+        </li>
+        <li><strong>Cabo Coaxial</strong>
+            <ul>
+                <li><strong>Descrição:</strong> Um tubo com outro tubo dentro. Usado para TV a cabo e Internet.</li>
+                <li><strong>Uso:</strong> Conecta a televisão e o modem de Internet a um serviço de TV a cabo.</li>
+            </ul>
+        </li>
+        <li><strong>Fibra Ótica</strong>
+            <ul>
+                <li><strong>Descrição:</strong> Um fio muito fino que brilha. Envia mensagens usando luz.</li>
+                <li><strong>Uso:</strong> Usado para enviar dados muito rapidamente, especialmente por longas distâncias, como entre cidades.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>2. Meios Não Guiados (sem cabos, como ondas de rádio)</h3>
+    <ul>
+        <li><strong>Wi-Fi</strong>
+            <ul>
+                <li><strong>Descrição:</strong> É como mágica! Envia mensagens pelo ar, sem cabos, usando ondas de rádio.</li>
+                <li><strong>Uso:</strong> Conecta seu tablet, smartphone ou computador à Internet sem precisar de fios.</li>
+            </ul>
+        </li>
+        <li><strong>Rádio e Satélite</strong>
+            <ul>
+                <li><strong>Rádio:</strong> Como as músicas que você ouve no carro, mas para enviar dados entre dispositivos próximos.</li>
+                <li><strong>Satélite:</strong> Um satélite no espaço enviando e recebendo sinais, como uma conversa por walkie-talkie de muito longe.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Comparando os Dois Tipos</h2>
+    <ul>
+        <li><strong>Meios Guiados (com cabos)</strong>
+            <ul>
+                <li><strong>Transmissão:</strong> Mensagens viajam dentro dos cabos.</li>
+                <li><strong>Instalação:</strong> Precisa colocar cabos dentro das paredes ou no chão.</li>
+                <li><strong>Interferência:</strong> Menos problemas com coisas atrapalhando a mensagem.</li>
+            </ul>
+        </li>
+        <li><strong>Meios Não Guiados (sem cabos)</strong>
+            <ul>
+                <li><strong>Transmissão:</strong> Mensagens viajam pelo ar, como mágica.</li>
+                <li><strong>Instalação:</strong> Não precisa de cabos, então é fácil de usar em qualquer lugar.</li>
+                <li><strong>Interferência:</strong> Coisas como paredes e outros aparelhos podem atrapalhar a mensagem.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Resumo</h2>
+    <p><strong>Wi-Fi</strong> é um meio físico porque é uma forma de enviar mensagens.</p>
+    <p>Ele não usa cabos, então é um <strong>meio não guiado</strong>.</p>
+    <p>É como mágica, enviando dados pelo ar, assim como sua voz viaja pelo ar quando você fala.</p>
+    <a href="01_introducao.html">Ir para parte 1</a><br>
+    <a href="02_introducao.html">Ir para parte 2</a><br>
+    <a href="04_introducao.html">Ir para parte 4</a><br>
+    <a href="05_introducao.html">Ir para parte 5</a><br>
+</body>
+</body>
+</html>
